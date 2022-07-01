@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{804FDAE8-3472-468D-98E5-2DC37B2C5788}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CE0B655A-0CB1-44E8-AD49-CCE928C92847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{54DF257D-79EB-4232-9C5C-295386E04F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSTracker.Application", "Core\GPSTracker.Application\GPSTracker.Application.csproj", "{479092A7-833B-4DB6-88BE-17AEEBB6199E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSTracker.Domain", "Core\GPSTracker.Domain\GPSTracker.Domain.csproj", "{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSTracker.Infrastructure", "Infrastructure\GPSTracker.Infrastructure\GPSTracker.Infrastructure.csproj", "{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSTracker.Persistance", "Infrastructure\GPSTracker.Persistance\GPSTracker.Persistance.csproj", "{C14766CF-D1E3-4710-BE78-76F50EB034CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSTracker.API", "Presentation\GPSTracker.API\GPSTracker.API.csproj", "{2E0AF162-1FA0-4526-B579-F17F896CDF9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{479092A7-833B-4DB6-88BE-17AEEBB6199E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479092A7-833B-4DB6-88BE-17AEEBB6199E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479092A7-833B-4DB6-88BE-17AEEBB6199E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479092A7-833B-4DB6-88BE-17AEEBB6199E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14766CF-D1E3-4710-BE78-76F50EB034CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14766CF-D1E3-4710-BE78-76F50EB034CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14766CF-D1E3-4710-BE78-76F50EB034CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14766CF-D1E3-4710-BE78-76F50EB034CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0AF162-1FA0-4526-B579-F17F896CDF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0AF162-1FA0-4526-B579-F17F896CDF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0AF162-1FA0-4526-B579-F17F896CDF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0AF162-1FA0-4526-B579-F17F896CDF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{479092A7-833B-4DB6-88BE-17AEEBB6199E} = {804FDAE8-3472-468D-98E5-2DC37B2C5788}
+		{949DD4A4-E3B6-4B91-B078-D9FF118B3D1C} = {804FDAE8-3472-468D-98E5-2DC37B2C5788}
+		{42B9FCAD-46E7-4CDE-A2E7-8FFEE80BDD04} = {CE0B655A-0CB1-44E8-AD49-CCE928C92847}
+		{C14766CF-D1E3-4710-BE78-76F50EB034CC} = {CE0B655A-0CB1-44E8-AD49-CCE928C92847}
+		{2E0AF162-1FA0-4526-B579-F17F896CDF9E} = {54DF257D-79EB-4232-9C5C-295386E04F7D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D624D62-4EBB-4ABE-94C7-8D63CAD71E0B}
+	EndGlobalSection
+EndGlobal
