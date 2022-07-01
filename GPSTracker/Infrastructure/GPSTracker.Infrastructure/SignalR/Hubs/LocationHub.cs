@@ -1,5 +1,7 @@
-﻿using GPSTracker.Persistance.Data.Contexts;
+﻿using GPSTracker.Domain.Entities;
+using GPSTracker.Persistance.Data.Contexts;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,33 @@ namespace GPSTracker.Infrastructure.SignalR.Hubs
         {
             Clients.All.SendAsync("disconnected", Context.ConnectionId);
             return base.OnDisconnectedAsync(exception);
+        }
+
+        public async Task Connect(string tag)
+        {
+            var user = await _context.Users.Where(u => u.Name == tag && u.IsActive == true).FirstOrDefaultAsync();
+            if (user == null)
+            {
+                user = new()
+                {
+                    CreatedDate = DateTime.UtcNow,
+                    Id = Guid.NewGuid(),
+                    IsActive = true,
+                    Name = tag,
+                    ConnectionId = Context.ConnectionId
+                };
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                user.ConnectionId = Context.ConnectionId;
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+            }
+           
+
+           
         }
     }
 }
