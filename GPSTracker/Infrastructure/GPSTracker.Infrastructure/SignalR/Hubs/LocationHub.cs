@@ -30,7 +30,7 @@ namespace GPSTracker.Infrastructure.SignalR.Hubs
             return base.OnDisconnectedAsync(exception);
         }
 
-        public async Task Connect(string tag)
+        public async Task Connect(string tag, string lat, string lon)
         {
             var user = await _context.Users.Where(u => u.Name == tag && u.IsActive == true).FirstOrDefaultAsync();
             if (user == null)
@@ -52,8 +52,8 @@ namespace GPSTracker.Infrastructure.SignalR.Hubs
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
             }
-           
 
+           await Clients.All.SendAsync("location", lat, lon);
            
         }
     }
