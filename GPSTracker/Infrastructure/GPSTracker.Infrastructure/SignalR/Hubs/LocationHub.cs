@@ -53,7 +53,7 @@ namespace GPSTracker.Infrastructure.SignalR.Hubs
                 await _context.SaveChangesAsync();
             }
 
-           await Clients.All.SendAsync("location", lat, lon);
+           await Clients.All.SendAsync("location",tag, lat, lon);
            
         }
     }
