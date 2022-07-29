@@ -30,6 +30,11 @@ namespace GPSTracker.Infrastructure.SignalR.Hubs
             return base.OnDisconnectedAsync(exception);
         }
 
+        public async Task DisconnectedC(string tag)
+        {
+            await Clients.All.SendAsync("userDisconnected", tag);
+        }
+
         public async Task Connect(string tag, string lat, string lon)
         {
             var user = await _context.Users.Where(u => u.Name == tag && u.IsActive == true).FirstOrDefaultAsync();
